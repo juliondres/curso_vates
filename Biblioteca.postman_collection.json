@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "56a33546-3b76-4464-8ca4-2de5c3e30c30",
+		"name": "Biblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4127992"
+	},
+	"item": [
+		{
+			"name": "bibliotecario",
+			"item": [
+				{
+					"name": "crearLibro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"la vuelta al mundo en 80 dias\",\r\n    \"autor\": {\r\n        \"nombre\": \"Julio\",\r\n        \"apellido\": \"Verne\",\r\n        \"pseudonimo\": \"Julio Verne\"\r\n    },\r\n    \"fechaPublicacion\": \"1872-05-06\",\r\n    \"categorias\": [\r\n        {\r\n            \"nombre\": \"Ciencia Ficcion\",\r\n            \"descripcion\": \"genero fantastico\"\r\n        },\r\n        {\r\n            \"nombre\": \"Aventura\",\r\n            \"descripcion\": \"genero emocionante\"\r\n        }\r\n    ],\r\n    \"editorial\": {\r\n        \"nombre\": \"Hetzel\",\r\n        \"direccion\": \"genero fantastico\",\r\n        \"telefono\": \"123123123\",\r\n        \"correoElectronico\": \"hetzel@correo.com\"\r\n    },\r\n    \"cantidad\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/bibliotecario/libro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"bibliotecario",
+								"libro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crearLibro2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"el principito\",\r\n    \"autor\": {\r\n        \"nombre\": \"Antoine\",\r\n        \"apellido\": \"Saint Exupery\",\r\n        \"pseudonimo\": \"Saint Exupery\"\r\n    },\r\n    \"fechaPublicacion\": \"1943-04-06\",\r\n    \"categorias\": [\r\n        {\r\n            \"nombre\": \"novela\",\r\n            \"descripcion\": \"genero novela\"\r\n        }\r\n    ],\r\n    \"editorial\": {\r\n        \"nombre\": \"Emece Editores\",\r\n        \"direccion\": \"siempre viva 123456\",\r\n        \"telefono\": \"123123123\",\r\n        \"correoElectronico\": \"emece@correo.com\"\r\n    },\r\n    \"cantidad\": 15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/bibliotecario/libro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"bibliotecario",
+								"libro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crearLibro MARTE",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "devolucionPrestamo",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "prestamo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\": {\r\n        \"nombre\": \"juan carlos\",\r\n        \"apellido\": \"calvo\",\r\n        \"dni\": 12345678,\r\n        \"direccion\": \"avenida fader 1245\"\r\n    },\r\n    \"libros\": [\r\n        {\r\n            \"id\": 1\r\n        },\r\n        {\r\n            \"id\": 2\r\n        }\r\n    ],\r\n    \"fechaPrestamo\": \"2023-11-03\",\r\n    \"fechaDevolucion\": \"2023-11-07\",\r\n    \"devolucion\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/prestamo/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"prestamo",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuario",
+			"item": [
+				{
+					"name": "obtenerLibroPorTitulo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/usuario/libro/titulo/la vuelta al mundo en 80 dias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"usuario",
+								"libro",
+								"titulo",
+								"la vuelta al mundo en 80 dias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerLibroPorTitulo2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/usuario/libro/titulo/el principito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"usuario",
+								"libro",
+								"titulo",
+								"el principito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerLibroPorCategoria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/usuario/libro/categoria/Ciencia Ficcion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"usuario",
+								"libro",
+								"categoria",
+								"Ciencia Ficcion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerLibroPorAutor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/usuario/libro/autor/julio/Verne",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"usuario",
+								"libro",
+								"autor",
+								"julio",
+								"Verne"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
